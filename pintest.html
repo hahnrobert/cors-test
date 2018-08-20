@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+
+<script>
+function loadFile(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.withCredentials = true;
+    xhr.onload = function () {
+        console.log("XHR request completed");
+    };
+    xhr.onerror = function () {
+        console.log("XHR request failed");
+    };
+    xhr.send(null);
+}
+
+loadFile('https://obscure-woodland-33257.herokuapp.com/')
+</script>
+
+</body>
+</html>
